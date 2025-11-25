@@ -71,14 +71,11 @@ class TransaksiController extends Controller
         return view('transaksi.show', compact('transaksi'));
     }
 
-    public function edit($id)
-    {
-        $transaksi = Transaksi::with('komponens')->findOrFail($id);
-        $supplier = Supplier::all();
-        $komponen    = Komponen::all();
-
-        return view('transaksi.edit', compact('transaksi', 'supplier', 'komponen'));
-    }
+public function edit(Transaksi $transaksi)
+{
+    $suppliers = Supplier::all();
+    return view('transaksi.edit', compact('transaksi', 'suppliers'));
+}
 
     public function update(Request $request, $id)
     {
