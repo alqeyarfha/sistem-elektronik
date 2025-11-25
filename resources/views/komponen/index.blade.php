@@ -27,7 +27,7 @@
                                     <th>Harga</th>
                                     <th>Stok</th>
                                     <th>Kategori</th>
-                                    <th>Aksi</th>
+                                    <th>Supplier</th> <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,7 +38,8 @@
                                     <td>{{ $data->nama_komponen }}</td>
                                     <td>{!! $data->harga !!}</td>
                                     <td>{{ $data->stok}}</td>
-                                    <td>{{ $data->kategori->nama_kategori}}</td>
+                                    {{-- BARIS YANG DIPERBAIKI --}}
+                                    <td>{{ $data->kategori?->nama_kategori }}</td>
                                     <td>
                                         <form action="{{ route('komponen.destroy', $data->id) }}" method="POST">
                                             @csrf

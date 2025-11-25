@@ -49,12 +49,12 @@
 
         .sidebar {
             width: 230px;
-            background: linear-gradient(-45deg, #ff8800,#ffa500, #ff4500);
+            background: linear-gradient(-45deg, #A200FFFF,#1900FFFF, #229605FF);
             color: #ffffff;
             min-height: 100vh;
             padding-top: 20px;
             position: fixed;
-            top: 0; 
+            top: 0;
             left: 0;
             display: flex;
             flex-direction: column;

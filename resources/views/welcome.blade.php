@@ -15,7 +15,7 @@
 
         body, html {
             height: 100%;
-            background: linear-gradient(135deg, #ff8c00, #ffa500);
+            background: linear-gradient(135deg, #0044FFFF, #48FF00FF);
         }
 
         .container {
@@ -48,7 +48,7 @@
 
         .login-btn {
             background-color: white;
-            color: #ff8c00;
+            color: #00FF15FF;
         }
 
         .login-btn:hover {
