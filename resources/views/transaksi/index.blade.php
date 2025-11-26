@@ -6,8 +6,8 @@
 </p>
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4 bg">
-        <h3>Daftar Transaksi</h3>
-        <a href="{{ route('transaksi.create') }}" class="btn btn-primary">+ Tambah Transaksi</a>
+        <h3>Daftar pembelian</h3>
+        <a href="{{ route('transaksi.create') }}" class="btn btn-primary">+ Tambah pembelian</a>
     </div>
 
     {{-- Notifikasi sukses --}}
@@ -17,7 +17,7 @@
     </div>
     @endif
 
-    {{-- Notifikasi error --}}  
+    {{-- Notifikasi error --}}
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul class="mb-0">
@@ -34,7 +34,7 @@
             <thead class="table-light">
                 <tr>
                     <th>No</th>
-                    <th>Kode Transaksi</th>
+                    <th>Kode pembelian</th>
                     <th>Tanggal</th>
                     <th>Pelanggan</th>
                     <th>Total Harga</th>
@@ -51,9 +51,9 @@
                     <td>Rp{{ number_format($trx->total_harga, 0, ',', '.') }}</td>
                     <td>
                         <a href="{{ route('transaksi.show', $trx->id) }}"
-                            class="btn btn-outline-warning btn-sm">Show</a>
+                            class="btn btn-outline-warning btn-sm">Show</a> |
                         <a href="{{ route('transaksi.edit', $trx->id) }}"
-                            class="btn btn-outline-success btn-sm">Edit</a>
+                            class="btn btn-outline-success btn-sm">Edit</a> |
                         <form action="{{ route('transaksi.destroy', $trx->id) }}" method="POST" class="d-inline"
                             onsubmit="return confirm('Yakin mau hapus transaksi ini?')">
                             @csrf

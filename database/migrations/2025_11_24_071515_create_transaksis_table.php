@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transaksis', function (Blueprint $table) {
+        Schema::create('pembelians', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_transaksi')->unique();
+            $table->string('kode_pembelian')->unique();
             $table->foreignId('id_supplier')->constrained('suppliers');
             $table->date('tanggal');
             $table->integer('total_harga');
             $table->timestamps();
         });
 
-        Schema::create('detail_transaksi', function (Blueprint $table) {
+        Schema::create('detail_pembelian', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_transaksi')->constrained('transaksis');
+            $table->foreignId('id_pembelian')->constrained('pembelians');
             $table->foreignId('id_komponen')->constrained('komponens');
             $table->integer('jumlah');
             $table->integer('sub_total');
@@ -36,7 +36,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transaksis');
-        Schema::dropIfExists('detail_transaksi');
+        Schema::dropIfExists('pembelians');
+        Schema::dropIfExists('detail_pembelian');
     }
 };

@@ -4,7 +4,7 @@
 <div class="container mt-4">
     <div class="card shadow-sm border-0">
         <div class="card-header bg-dark text-info d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Detail Transaksi</h5>
+            <h5 class="mb-0">Detail transaksi</h5>
             <a href="{{ route('transaksi.index') }}" class="btn btn-light btn-sm">Kembali</a>
         </div>
 
@@ -12,11 +12,11 @@
             <p>
 
             </p>
-            {{-- Informasi Transaksi --}}
-            <h6 class="fw-bold mb-3">Informasi Transaksi</h6>
+            {{-- Informasi transaksi --}}
+            <h6 class="fw-bold mb-3">Informasi transaksi</h6>
             <table class="table table-sm table-bordered mb-4">
                 <tr>
-                    <th>Kode Transaksi</th>
+                    <th>Kode transaksi</th>
                     <td>{{ $transaksi->kode_transaksi }}</td>
                 </tr>
                 <tr>

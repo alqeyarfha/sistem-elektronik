@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Electic</title>
+    <title>Landing Page Electro</title>
     <style>
         /* Reset dasar */
         * {
@@ -15,7 +15,7 @@
 
         body, html {
             height: 100%;
-            background: linear-gradient(135deg, #0044FFFF, #48FF00FF);
+            background: linear-gradient(135deg, #4371F0FF, #51F051FF);
         }
 
         .container {
@@ -25,7 +25,7 @@
             align-items: flex-start; /* Sedikit ke kiri */
             height: 100%;
             padding-left: 10%; /* Jarak dari kiri */
-            color: white;
+            color: rgb(57, 116, 151);
         }
 
         .container h1 {
@@ -47,8 +47,8 @@
         }
 
         .login-btn {
-            background-color: white;
-            color: #00FF15FF;
+            background-color: rgb(48, 37, 37);
+            color: #1DFDF2FF;
         }
 
         .login-btn:hover {
@@ -57,8 +57,8 @@
 
         .register-btn {
             background-color: transparent;
-            border: 2px solid white;
-            color: white;
+            border: 2px solid rgb(20, 218, 191);
+            color: rgb(39, 238, 145);
         }
 
         .register-btn:hover {
@@ -81,7 +81,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Selamat Datang di Electic</h1>
+        <h1>Selamat Datang di Electro</h1>
         <div class="buttons">
             <a href="/login" class="login-btn">Login</a>
             <a href="/register" class="register-btn">Register</a>

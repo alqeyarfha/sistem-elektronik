@@ -2,10 +2,10 @@
 
 @section('content')
 <p>
-    
+
 </p>
 <div class="container">
-    <h3 class="mb-4">Tambah Transaksi Baru</h3>
+    <h3 class="mb-4">Tambah pembelian Baru</h3>
 
     {{-- Notifikasi Error --}}
     @if ($errors->any())
@@ -79,7 +79,8 @@
                 </div>
 
                 <div class="text-end">
-                    <button type="submit" class="btn btn-primary btn-sm">Simpan Transaksi</button>
+                    <a href="{{ route('transaksi.index') }}" class="btn btn-outline-secondary">Kembali</a>
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan </button>
                 </div>
             </form>
         </div>

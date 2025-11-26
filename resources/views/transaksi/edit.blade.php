@@ -7,19 +7,19 @@
 <div class="col-md-8">
 <div class="card">
 <div class="card-header">
-<h3>Edit Transaksi: {{ $transaksi->kode_transaksi }}</h3>
+<h3>Edit transaksi: {{ $transaksi->kode_transaksi }}</h3>
 </div>
 
             <div class="card-body">
-                {{-- Form untuk Update Transaksi --}}
+                {{-- Form untuk Update transaksi --}}
                 <form action="{{ route('transaksi.update', $transaksi->id) }}" method="POST">
                     @csrf
                     {{-- Laravel menggunakan directive @method('PUT') untuk request update --}}
                     @method('PUT')
 
-                    {{-- Input Kode Transaksi (Biasanya tidak diubah, tapi disertakan) --}}
+                    {{-- Input Kode transaksi (Biasanya tidak diubah, tapi disertakan) --}}
                     <div class="mb-3">
-                        <label for="kode_transaksi" class="form-label">Kode Transaksi</label>
+                        <label for="kode_transaksi" class="form-label">Kode transaksi</label>
                         <input type="text"
                             class="form-control @error('kode_transaksi') is-invalid @enderror"
                             id="kode_transaksi"
@@ -33,7 +33,7 @@
 
                     {{-- Input Tanggal --}}
                     <div class="mb-3">
-                        <label for="tanggal" class="form-label">Tanggal Transaksi</label>
+                        <label for="tanggal" class="form-label">Tanggal transaksi</label>
                         {{-- Mengambil bagian tanggal saja dari timestamp --}}
                         <input type="date"
                             class="form-control @error('tanggal') is-invalid @enderror"

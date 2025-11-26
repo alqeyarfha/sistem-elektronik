@@ -49,7 +49,7 @@
 
         .sidebar {
             width: 230px;
-            background: linear-gradient(-45deg, #A200FFFF,#1900FFFF, #229605FF);
+            background: linear-gradient(-45deg, #7D0FD8FF,#1900FFFF, #229605FF);
             color: #ffffff;
             min-height: 100vh;
             padding-top: 20px;
@@ -90,10 +90,10 @@
                 width: 100%;
             }
         }
-                }
+
         .form-control:focus {
         border-color: #ff8800;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0.5);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(165, 37, 165, 0.5);
     }
         /* ====== END SIDEBAR ====== */
     </style>
@@ -105,7 +105,7 @@
         <div class="wrapper">
             <div class="sidebar">
                 <div>
-                    <a href="/" style="color : white;"><h2>Electod</h2></a>
+                    <a href="/" style="color : white;"><h2>Electro</h2></a>
                     <hr>
                     <a class="rounded nav-link" href="{{ route('supplier.index') }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
   <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
@@ -119,7 +119,7 @@
                     <a class="rounded nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
   <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
   <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"/>
-</svg> Transaksi</a>
+</svg> pembelian</a>
 
                 </div>
 

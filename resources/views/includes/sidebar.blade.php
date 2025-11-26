@@ -1,4 +1,4 @@
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="background: linear-gradient(-45deg, #ff2222, #ff5a5a, #ffa8f6, #69c3ff);">
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="background: linear-gradient(-45deg, #73FF22FF, #5AFFFFFF, #26E2B9FF, #69FF69FF);">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
@@ -37,11 +37,11 @@
                           <use fill="#090BAAFF" xlink:href="#path-1"></use>
                           <g id="Path-3" mask="url(#mask-2)">
                             <use fill="#070BF5FF" xlink:href="#path-3"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
+                            <use fill-opacity="0.2" fill="#274DF3FF" xlink:href="#path-3"></use>
                           </g>
                           <g id="Path-4" mask="url(#mask-2)">
                             <use fill="#1013C5FF" xlink:href="#path-4"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
+                            <use fill-opacity="0.2" fill="#37EAF7FF" xlink:href="#path-4"></use>
                           </g>
                         </g>
                         <g
@@ -49,14 +49,14 @@
                           transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
                         >
                           <use fill="#69FFF8FF" xlink:href="#path-5"></use>
-                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                          <use fill-opacity="0.2" fill="#11B9CFFF" xlink:href="#path-5"></use>
                         </g>
                       </g>
                     </g>
                   </g>
                 </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">Electero</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">Electro</span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -89,13 +89,13 @@
             <li class="menu-item active">
               <a href="{{ route('transaksi.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Transaksi</div>
+                <div data-i18n="Analytics">pembelian</div>
               </a>
             </li>
             <li class="menu-item active">
               <a href="{{ route('pembayaran.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Pembayaran</div>
+                <div data-i18n="Analytics">detail Pembelian</div>
               </a>
             </li>
           </ul>
