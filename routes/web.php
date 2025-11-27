@@ -7,27 +7,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Auth Laravel
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
+    ->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::group(['prefix' => 'admin', 'middlewars' => ['auth']], function () {
+// ADMIN (middleware auth)
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('supplier', App\Http\Controllers\SupplierController::class);
     Route::resource('kategori', App\Http\Controllers\KategoriController::class);
     Route::resource('komponen', App\Http\Controllers\KomponenController::class);
@@ -38,6 +25,5 @@ Route::get('templete', function () {
     return view('layouts.dashboard');
 });
 
-
-
+// Pembayaran
 Route::resource('pembayaran', PembayaranController::class);

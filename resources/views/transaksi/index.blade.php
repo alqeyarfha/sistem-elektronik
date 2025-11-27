@@ -34,7 +34,7 @@
             <thead class="table-light">
                 <tr>
                     <th>No</th>
-                    <th>Kode pembelian</th>
+                    <th>Kode Pembelian</th>
                     <th>Tanggal</th>
                     <th>Supplier</th>
                     <th>Total Harga</th>
@@ -45,19 +45,16 @@
                 @foreach ($transaksi as $no => $trx)
                 <tr>
                     <td>{{ $no + 1 }}</td>
-                    <td>{{ $trx->kode_transaksi }}</td>
+                    <td><strong>{{ $trx->kode_pembelian }}</strong></td>
                     <td>{{ \Carbon\Carbon::parse($trx->tanggal)->format('d M Y, H:i') }}</td>
                     <td>{{ $trx->supplier->nama_supplier ?? '-' }}</td>
-                    <td>Rp{{ number_format($trx->total_harga, 0, ',', '.') }}</td>
+                    <td>Rp{{ number_format($trx->total_harga, 0, ',', '.') }}</td>   <!-- PASTIKAN ADA -->
                     <td>
-                        <a href="{{ route('transaksi.show', $trx->id) }}"
-                            class="btn btn-outline-warning btn-sm">Show</a> |
-                        <a href="{{ route('transaksi.edit', $trx->id) }}"
-                            class="btn btn-outline-success btn-sm">Edit</a> |
+                        <a href="{{ route('transaksi.show', $trx->id) }}" class="btn btn-outline-warning btn-sm">Show</a>
+                        <a href="{{ route('transaksi.edit', $trx->id) }}" class="btn btn-outline-success btn-sm">Edit</a>
                         <form action="{{ route('transaksi.destroy', $trx->id) }}" method="POST" class="d-inline"
-                            onsubmit="return confirm('Yakin mau hapus transaksi ini?')">
-                            @csrf
-                            @method('DELETE')
+                            onsubmit="return confirm('Yakin hapus? Stok akan kembali.')">
+                            @csrf @method('DELETE')
                             <button type="submit" class="btn btn-outline-danger btn-sm">Hapus</button>
                         </form>
                     </td>

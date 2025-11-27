@@ -5,8 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
 {
-    protected $table = 'transaksi';
-    protected $fillable = ['kode', 'id_supplier', 'id_komponen', 'jumlah', 'total_harga'];
+    protected $table = 'transaksis';
+    protected $fillable = ['kode_pembelian', 'id_supplier', 'id_komponen', 'jumlah', 'total_harga'];
     public function supplier()
     {
         return $this->belongsTo(Supplier::class, 'id_supplier');
@@ -25,4 +25,8 @@ class Transaksi extends Model
         return $this->hasOne(Pembayaran::class, 'id_transaksi');
     }
 
+    public function getKodeAttribute()
+{
+    return $this->kode_transaksi;
+}
 }

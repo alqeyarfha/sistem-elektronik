@@ -125,20 +125,15 @@
 
 @push('scripts')
 <script>
-    // Pastikan jQuery sudah dimuat di layouts/dashboard
+
     $(document).ready(function() {
-        /**
-         * Fungsi untuk memformat angka menjadi format Rupiah.
-         * Hanya untuk tampilan di frontend.
-         */
+
         function formatRupiah(angka, prefix) {
-            // Hilangkan semua karakter selain digit dan koma (jika menggunakan koma sebagai desimal)
+
             var number_string = angka.toString().replace(/[^,\d]/g, '');
 
-            // Jika input adalah float/decimal, gunakan titik sebagai pemisah ribuan dan koma sebagai desimal
-            var parts = number_string.split('.'); // Asumsi input dari <input type="number"> menggunakan titik sebagai desimal secara default pada JS
-            var split = parts[0].toString().split(','), // Split bagian integer
-                sisa = split[0].length % 3,
+
+            var parts = number_string.split('.');
                 rupiah = split[0].substr(0, sisa),
                 ribuan = split[0].substr(sisa).match(/\d{3}/gi);
 
@@ -147,34 +142,22 @@
                 rupiah += separator + ribuan.join('.');
             }
 
-            // Tambahkan bagian desimal (jika ada)
-            // Di Indonesia, biasanya menggunakan koma untuk desimal, tetapi karena input type=number, kita biarkan saja
-            // Mengingat kasus pembayaran umumnya menggunakan bilangan bulat, kita fokus pada pemisah ribuan
             rupiah = parts.length > 1 ? rupiah + ',' + parts[1].substring(0, 2) : rupiah;
 
             return prefix === undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
         }
-
-        /**
-         * Fungsi untuk menghitung dan menampilkan kembalian.
-         */
         function hitungKembalian() {
             var selectedOption = $('#transaksi_id').find('option:selected');
             var totalHarga = parseFloat(selectedOption.data('total-harga')) || 0;
-            // Gunakan parseFloat untuk mendapatkan nilai angka dari input jumlah_bayar
             var jumlahBayar = parseFloat($('#jumlah_bayar').val()) || 0;
 
-            // --- Bagian Tampilkan Total Harga ---
             $('#info_total_harga').text('Total Harga Transaksi: ' + formatRupiah(totalHarga, 'Rp. '));
             $('#info_total_harga').toggleClass('text-primary', totalHarga > 0);
-            // ------------------------------------
 
             var kembalian = jumlahBayar - totalHarga;
 
-            // --- Bagian Tampilkan Kembalian ---
-            $('#kembalian').val(formatRupiah(Math.abs(kembalian), 'Rp. ')); // Tampilkan nilai absolut
+            $('#kembalian').val(formatRupiah(Math.abs(kembalian), 'Rp. '));
 
-            // Berikan highlight
             $('#kembalian').removeClass('text-danger text-success text-muted');
             if (kembalian < 0) {
                 $('#kembalian').addClass('text-danger').val('Kurang Bayar: ' + formatRupiah(Math.abs(kembalian), 'Rp. '));
@@ -183,20 +166,15 @@
             } else {
                  $('#kembalian').addClass('text-muted').val('Pas / Belum Bayar');
             }
-            // ------------------------------------
+
         }
 
-        // Event listener saat transaksi dipilih
         $('#transaksi_id').on('change', function() {
             hitungKembalian();
         });
-
-        // Event listener saat jumlah bayar diinput
         $('#jumlah_bayar').on('input', function() {
             hitungKembalian();
         });
-
-        // Panggil saat halaman pertama kali dimuat (untuk old value jika ada)
         hitungKembalian();
     });
 </script>

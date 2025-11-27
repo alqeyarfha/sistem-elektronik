@@ -31,13 +31,14 @@ class TransaksiController extends Controller
             'jumlah.*'     => 'integer|min:1',
         ]);
 
-        $kode                      = 'TRX-' . strtoupper(uniqid());
-        $transaksi                 = new Transaksi();
-        $transaksi->kode_transaksi = $kode;
+        $kode = 'TRX-' . strtoupper(uniqid());
+        $transaksi = new Transaksi();
+        $transaksi->kode_pembelian = $kode; // gunakan variabel $kode
         $transaksi->id_supplier   = $request->id_supplier;
-        $transaksi->tanggal        = now();
-        $transaksi->total_harga    = 0;
+        $transaksi->tanggal       = now();
+        $transaksi->total_harga   = 0;
         $transaksi->save();
+
 
         $totalHarga  = 0;
         $komponenPivot = [];

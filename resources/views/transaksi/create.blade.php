@@ -23,12 +23,10 @@
         <div class="card-body">
             <form action="{{ route('transaksi.store') }}" method="POST">
                 @csrf
-
-                {{-- Pilih Pelanggan --}}
                 <div class="mb-3">
-                    <label for="id_supplier" class="form-label">Pelanggan</label>
+                    <label for="id_supplier" class="form-label">Supplier</label>
                     <select name="id_supplier" id="id_supplier" class="form-select" required>
-                        <option value="">-- Pilih Pelanggan --</option>
+                        <option value="">-- Pilih Supplier --</option>
                         @foreach ($supplier as $p)
                         <option value="{{ $p->id }}">{{ $p->nama_supplier }}</option>
                         @endforeach

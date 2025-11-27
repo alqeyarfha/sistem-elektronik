@@ -168,17 +168,16 @@
             // ------------------------------------
         }
 
-        // Event listener saat transaksi dipilih
+
         $('#transaksi_id').on('change', function() {
             hitungKembalian();
         });
 
-        // Event listener saat jumlah bayar diinput
+
         $('#jumlah_bayar').on('input', function() {
             hitungKembalian();
         });
 
-        // Panggil saat halaman pertama kali dimuat (untuk menampilkan nilai data yang di-edit)
         hitungKembalian();
     });
 </script>

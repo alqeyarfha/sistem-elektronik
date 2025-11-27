@@ -103,7 +103,7 @@
             <li class="menu-item active">
               <a href="{{ route('pembayaran.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-receipt" style="color: rgb(247, 15, 131);"></i>
-                <div data-i18n="Analytics" style="color: rgb(255, 0, 157);">detail Pembelian</div>
+                <div data-i18n="Analytics" style="color: rgb(255, 0, 157);">pembayaran</div>
               </a>
             </li>
           </ul>

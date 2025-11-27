@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-start">
-                        {{ __('Daftar Pembelian') }} 💳
+                        {{ __('Pembayaran') }} 💳
                     </div>
                     <div class="float-end">
                         <a href="{{ route('pembayaran.create') }}" class="btn btn-primary">+ Tambah Pembayaran</a>
@@ -26,7 +26,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Kode Pembayaran</th>
-                                    <th>Kode Transaksi</th>
+                                    <th>Kode Pembelian</th>
                                     <th>Tanggal Bayar</th>
                                     <th>Jumlah Bayar</th>
                                     <th>Metode</th>
@@ -42,7 +42,7 @@
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $data->kode_pembayaran }}</td>
-                                    <td>{{ $data->transaksi->kode_transaksi ?? 'N/A' }}</td>
+                                    <td>{{ $data->transaksi->kode_pembelian ?? 'N/A' }}</td>
                                     <td>{{ \Carbon\Carbon::parse($data->tanggal_bayar)->isoFormat('D MMMM Y') }}</td>
                                     <td>Rp. {{ number_format($data->jumlah_bayar, 0, ',', '.') }}</td>
                                     <td>{{ $data->metode_pembayaran }}</td>

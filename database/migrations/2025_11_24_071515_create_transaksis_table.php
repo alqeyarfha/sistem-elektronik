@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pembelians', function (Blueprint $table) {
+        Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
             $table->string('kode_pembelian')->unique();
             $table->foreignId('id_supplier')->constrained('suppliers');
@@ -20,14 +20,15 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('detail_pembelian', function (Blueprint $table) {
+        Schema::create('detail_transaksis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pembelian')->constrained('pembelians');
+            $table->foreignId('id_transaksi')->constrained('transaksis');
             $table->foreignId('id_komponen')->constrained('komponens');
             $table->integer('jumlah');
             $table->integer('sub_total');
             $table->timestamps();
         });
+        
 
     }
 
@@ -36,7 +37,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pembelians');
-        Schema::dropIfExists('detail_pembelian');
+        Schema::dropIfExists('transaksis');
+        Schema::dropIfExists('detail_transaksis');
     }
 };
