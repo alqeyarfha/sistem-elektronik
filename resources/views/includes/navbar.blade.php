@@ -1,6 +1,6 @@
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar" style="background: linear-gradient(-45deg, #22FF3FFF, #2EA4F3FF, #62E63AFF, #2F9EF8FF);"
+            id="layout-navbar" style="background: linear-gradient(-45deg, rgb(252, 255, 252), #2EA4F3FF, rgb(246, 248, 245), #2F9EF8FF);"
           >
             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
               <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">

@@ -1,4 +1,4 @@
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="background: linear-gradient(-45deg, #73FF22FF, #5AFFFFFF, #26E2B9FF, #69FF69FF);">
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="background: linear-gradient(-45deg, rgb(17, 156, 236), rgb(243, 244, 245), rgb(226, 229, 231), rgb(22, 155, 231));">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
@@ -34,7 +34,7 @@
                           <mask id="mask-2" fill="white">
                             <use xlink:href="#path-1"></use>
                           </mask>
-                          <use fill="#090BAAFF" xlink:href="#path-1"></use>
+                          <use fill="#9393EBFF" xlink:href="#path-1"></use>
                           <g id="Path-3" mask="url(#mask-2)">
                             <use fill="#070BF5FF" xlink:href="#path-3"></use>
                             <use fill-opacity="0.2" fill="#274DF3FF" xlink:href="#path-3"></use>
@@ -48,7 +48,7 @@
                           id="Triangle"
                           transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
                         >
-                          <use fill="#69FFF8FF" xlink:href="#path-5"></use>
+                          <use fill="#E0FCFAFF" xlink:href="#path-5"></use>
                           <use fill-opacity="0.2" fill="#11B9CFFF" xlink:href="#path-5"></use>
                         </g>
                       </g>

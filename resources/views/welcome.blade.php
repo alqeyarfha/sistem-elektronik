@@ -148,7 +148,7 @@
     <div class="main-content">
 
         <div class="left-side">
-            <h1>Selamat Datang di Electro</h1>
+            <h1>Selamat Datang di Toko Electro</h1>
             <div class="buttons">
                 <a href="/login" class="login-btn">Login</a>
                 <a href="/register" class="register-btn">Register</a>
