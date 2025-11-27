@@ -36,7 +36,7 @@
                     <th>No</th>
                     <th>Kode pembelian</th>
                     <th>Tanggal</th>
-                    <th>Pelanggan</th>
+                    <th>Supplier</th>
                     <th>Total Harga</th>
                     <th>Aksi</th>
                 </tr>

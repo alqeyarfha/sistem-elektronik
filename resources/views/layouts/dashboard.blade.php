@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/libs/apex-charts/apex-charts.css')}}" />
 
     <!-- Page CSS -->
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Helpers -->
     <script src="{{asset('assets/vendor/js/helpers.js')}}"></script>
 

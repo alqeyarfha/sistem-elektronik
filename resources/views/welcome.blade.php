@@ -61,7 +61,7 @@
         }
 
         .login-btn:hover {
-            background-color: #ffe0b2;
+            background-color: #fffffe;
             color: rgb(48, 37, 37);
         }
 
@@ -74,8 +74,8 @@
 
         .register-btn:hover {
             background-color: white;
-            color: #ff8c00;
-            border-color: #ff8c00;
+            color: #f3f2f1;
+            border-color: #fcfbf9;
         }
 
         .right-side {
@@ -89,8 +89,8 @@
         .hero-image {
             max-width: 100%;
             max-height: 80vh;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 90px;
+            box-shadow: 0 10px 90px rgb(2, 125, 241);
             object-fit: contain;
 
             /* Animasi Melayang */
@@ -126,7 +126,7 @@
             }
 
             .right-side {
-                padding: 0 5% 5% 5%;
+                padding: 0 5% 5% 500%;
             }
 
             .buttons {

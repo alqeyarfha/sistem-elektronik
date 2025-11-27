@@ -1,4 +1,4 @@
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="background: linear-gradient(-45deg, rgb(17, 156, 236), rgb(243, 244, 245), rgb(226, 229, 231), rgb(22, 155, 231));">
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" style="background: linear-gradient(-45deg, rgb(17, 156, 236), rgb(243, 244, 245), rgb(226, 229, 231), rgb(22, 155, 231));">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
@@ -34,23 +34,24 @@
                           <mask id="mask-2" fill="white">
                             <use xlink:href="#path-1"></use>
                           </mask>
-                          <use fill="#9393EBFF" xlink:href="#path-1"></use>
+                          <use fill="#9797F0FF" xlink:href="#path-1"></use>
                           <g id="Path-3" mask="url(#mask-2)">
-                            <use fill="#070BF5FF" xlink:href="#path-3"></use>
-                            <use fill-opacity="0.2" fill="#274DF3FF" xlink:href="#path-3"></use>
+                            <use fill="#6567F3FF" xlink:href="#path-3"></use>
+                            <use fill-opacity="0.2" fill="#AA6FF7FF" xlink:href="#path-3"></use>
                           </g>
                           <g id="Path-4" mask="url(#mask-2)">
-                            <use fill="#1013C5FF" xlink:href="#path-4"></use>
-                            <use fill-opacity="0.2" fill="#37EAF7FF" xlink:href="#path-4"></use>
+                            <use fill="#A8AAF1FF" xlink:href="#path-4"></use>
+                            <use fill-opacity="0.2" fill="#AF88F8FF" xlink:href="#path-4"></use>
                           </g>
                         </g>
                         <g
                           id="Triangle"
-                          transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
-                        >
-                          <use fill="#E0FCFAFF" xlink:href="#path-5"></use>
-                          <use fill-opacity="0.2" fill="#11B9CFFF" xlink:href="#path-5"></use>
+                          transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
+                          <use fill="#363A3AFF" xlink:href="#path-5"></use>
+                          <use fill-opacity="0.2" fill="#7F41E2FF" xlink:href="#path-5"></use>
                         </g>
+                      <g>
+                      </g>
                       </g>
                     </g>
                   </g>
@@ -63,39 +64,46 @@
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
+           <style>
+            .menu-item.active .menu-link {
+              background: linear-gradient(to right, #FFFFFFFF,#28C2DDFF) !important;
+            }
 
+            /* .layout-menu .menu-inner .menu-item.active > .menu-link > div,
+            .layout-menu .menu-inner .menu-item.active > .menu-link > i {
+              color: #b92626 !important;
+            } */
+           </style>
           <div class="menu-inner-shadow"></div>
-
           <ul class="menu-inner py-1">
-            <!-- Dashboard -->
             <li class="menu-item active">
               <a href="{{ route('supplier.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Supplier</div>
+                <i class="menu-icon tf-icons bx bx-home" style="color: rgb(22, 235, 86);"></i>
+                <div data-i1n="Analytics" style="color: rgb(33, 228, 15);">Supplier</div>
               </a>
             </li>
             <li class="menu-item active">
               <a href="{{ route('kategori.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Kategori</div>
+                <i class="menu-icon tf-icons bx bx-tag" style="color: rgb(1, 132, 255);"></i>
+                <div data-i18n="Analytics" style="color: rgb(4, 159, 248);">Kategori</div>
               </a>
             </li>
             <li class="menu-item active">
               <a href="{{ route('komponen.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">komponen</div>
+                <i class="menu-icon tf-icons bx bx-package" style="color: rgb(98, 0, 255);"></i>
+                <div data-i18n="Analytics" style="color: rgb(119, 0, 255);">komponen</div>
               </a>
             </li>
             <li class="menu-item active">
               <a href="{{ route('transaksi.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">pembelian</div>
+                <i class="menu-icon tf-icons bx bx-cart" style="color: rgb(212, 0, 255);"></i>
+                <div data-i18n="Analytics" style="color: rgb(212, 0, 255);">pembelian</div>
               </a>
             </li>
             <li class="menu-item active">
               <a href="{{ route('pembayaran.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">detail Pembelian</div>
+                <i class="menu-icon tf-icons bx bx-receipt" style="color: rgb(247, 15, 131);"></i>
+                <div data-i18n="Analytics" style="color: rgb(255, 0, 157);">detail Pembelian</div>
               </a>
             </li>
           </ul>
