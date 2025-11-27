@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
 {
+    protected $table = 'transaksi';
     protected $fillable = ['kode', 'id_supplier', 'id_komponen', 'jumlah', 'total_harga'];
     public function supplier()
     {

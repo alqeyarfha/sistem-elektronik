@@ -2,7 +2,7 @@
 
 @section('content')
 <p>
-    
+
 </p>
 <div class="container">
     <div class="row justify-content-center">
@@ -28,7 +28,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @php $no = 1; @endphp   
+                                @php $no = 1; @endphp
                                 @forelse ($kategori as $data)
                                 <tr>
                                     <td>{{ $no++ }}</td>

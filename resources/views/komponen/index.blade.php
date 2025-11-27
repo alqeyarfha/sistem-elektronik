@@ -38,8 +38,11 @@
                                     <td>{{ $data->nama_komponen }}</td>
                                     <td>{!! $data->harga !!}</td>
                                     <td>{{ $data->stok}}</td>
-                                    {{-- BARIS YANG DIPERBAIKI --}}
+
+                                    {{-- Kolom Kategori --}}
                                     <td>{{ $data->kategori?->nama_kategori }}</td>
+                                    <td>{{ $data->supplier?->nama_supplier }}</td>
+
                                     <td>
                                         <form action="{{ route('komponen.destroy', $data->id) }}" method="POST">
                                             @csrf
@@ -48,14 +51,15 @@
                                                 class="btn btn-sm btn-outline-info">Show</a> |
                                             <a href="{{ route('komponen.edit', $data->id) }}"
                                                 class="btn btn-sm btn-outline-success">Edit</a> |
-                                            <button type="submit" onsubmit="return confirm('Are You Sure ?');"
+                                            <button type="submit"
+                                                onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?');"
                                                 class="btn btn-sm btn-outline-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="6" class="text-center">
+                                    <td colspan="7" class="text-center">
                                         Data belum Tersedia.
                                     </td>
                                 </tr>

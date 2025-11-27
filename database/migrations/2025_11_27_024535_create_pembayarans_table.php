@@ -13,11 +13,6 @@ return new class extends Migration
     {
         Schema::create('pembayarans', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_pembayaran')->unique(); // Contoh: PB-001
-            $table->foreignId('transaksi_id')->constrained('transaksis')->onDelete('cascade'); // Relasi ke tabel transaksis
-            $table->date('tanggal_bayar');
-            $table->decimal('jumlah_bayar', 15, 2); // Jumlah uang yang dibayarkan
-            $table->string('metode_pembayaran')->nullable(); // Contoh: Cash, Transfer
             $table->timestamps();
         });
     }
